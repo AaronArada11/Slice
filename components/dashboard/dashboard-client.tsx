@@ -34,12 +34,12 @@ export default function DashboardClient({
             <p className="text-gray-600 mb-8">
               You haven't joined any households yet. Create or join one to get started.
             </p>
-            <Button asChild>
-              <Link href="/household/new">
+            <Link href="/household/new">
+              <Button>
                 <PlusCircle className="mr-2 h-4 w-4" />
                 Create Household
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -120,22 +120,22 @@ export default function DashboardClient({
               <CardTitle>Quick Actions</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <Button asChild className="w-full justify-start">
-                <Link href={`/household/${activeHousehold.id}/expenses/new`}>
+              <Link href={`/household/${activeHousehold.id}/expenses/new`}>
+                <Button className="w-full justify-start">
                   <PlusCircle className="mr-2 h-4 w-4" />
                   Add Expense
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="w-full justify-start">
-                <Link href={`/household/${activeHousehold.id}/rent`}>
+                </Button>
+              </Link>
+              <Link href={`/household/${activeHousehold.id}/rent`}>
+                <Button variant="outline" className="w-full justify-start">
                   Configure Rent
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="w-full justify-start">
-                <Link href={`/household/${activeHousehold.id}/members`}>
+                </Button>
+              </Link>
+              <Link href={`/household/${activeHousehold.id}/members`}>
+                <Button variant="outline" className="w-full justify-start">
                   Invite Members
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 

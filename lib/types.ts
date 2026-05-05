@@ -11,6 +11,8 @@ export type Household = {
   inviteCode: string
   createdAt: Date
   updatedAt: Date
+  memberships: Membership[]
+  expenses: Expense[]
 }
 
 export type Membership = {
@@ -45,6 +47,10 @@ export type Expense = {
   customSplits?: Record<string, number>
   date: Date
   notes?: string | null
+  paidBy: {
+    id: string
+    name?: string | null
+  }
 }
 
 export type Payment = {
